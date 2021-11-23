@@ -3,6 +3,7 @@
 #include <random>
 #include <functional>
 #include <algorithm>
+#include <cstring>
 
 namespace common::gol {
 

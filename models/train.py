@@ -33,7 +33,7 @@ def show_probabilities(w, h, pixel_size, pixel_data):
 
 
 def save_model(model):
-    output_folder = os.path.join(os.path.dirname(__file__), 'models')
+    output_folder = os.path.join(os.path.dirname(__file__), 'saved')
     # for python
     torch.save(model.state_dict(), os.path.join(output_folder, 'game_of_life_grid.pt'))
     # for c++

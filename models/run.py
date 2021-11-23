@@ -9,7 +9,7 @@ from prediction import GridPredictionModel
 
 
 def load_model(device):
-    model_path = os.path.join(os.path.dirname(__file__), 'models/game_of_life_grid.pt')
+    model_path = os.path.join(os.path.dirname(__file__), 'saved/game_of_life_grid.pt')
     model = GridPredictionModel()
     model.load_state_dict(torch.load(model_path))
     model.eval()

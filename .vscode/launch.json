@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}/../../common/game_of_life/build/Release"
+                "PYTHONPATH": "${workspaceFolder}/build/game_of_life"
             }
         }
     ]

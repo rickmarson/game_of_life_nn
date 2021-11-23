@@ -10,9 +10,8 @@ namespace models::gol {
 
         m_gol.initialise(m_grid_width, m_grid_height, m_width / m_grid_width);
         m_current_grid = m_gol.get_current_grid();
-        auto model_path = std::filesystem::current_path();
-        model_path += std::string("/models/game_of_life_grid.torchscript");
-        m_inference.load(model_path.string());
+        auto model_path = std::string("models/saved/game_of_life_grid.torchscript");
+        m_inference.load(model_path);
     }
 
     void GameOfLifeGridRunner::update() {

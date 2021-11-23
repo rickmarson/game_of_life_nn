@@ -1,6 +1,7 @@
 {
-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
-    "cmake.sourceDirectory": "${workspaceFolder}\\cpp",
+    "cmake.debugConfig": {
+        "cwd": "${workspaceFolder}"
+    },
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
         "filesystem": "cpp",

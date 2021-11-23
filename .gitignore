@@ -1,7 +1,2 @@
-common/game_of_life/.vs/
-*.vcxproj
-common/game_of_life/build/
-common/libtorch/
-common/mazes/build/
+build/
 *.pyc
-models/game_of_life/build/
