@@ -35,4 +35,4 @@ Tested with:
 - [pybind11](https://github.com/pybind/pybind11)
 - [SDL2](https://www.libsdl.org/)
 
-- Run `git submodule update --init --recursive` to initialise thirdparty dependencies (they will all be placed in `./utilities`)
+- Run `git submodule update --init --recursive` to initialise thirdparty dependencies (they will all be placed in `./thirdparty`)
