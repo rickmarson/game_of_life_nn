@@ -1,6 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.join(os.getcwd(), "build/game_of_life"))
+
 from game_of_life_py import GameOfLife
 import numpy as np
-import os
 import torch
 import torch.nn as nn
 from PIL import Image
@@ -94,7 +97,7 @@ def train_grid_model(w, h, cell_pixel_size, device):
             if cell > 0.5:
                 predicted_grid_bools[i][j] = True
 
-    show_grid(w, h, cell_pixel_size, gol.render_grid(predicted_grid_bools.tolist(), False))
+    show_grid(w, h, cell_pixel_size, gol.render_grid(predicted_grid_bools.tolist(), False, True))
 
     save_model(model)
 

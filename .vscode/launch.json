@@ -10,9 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "env": {
-                "PYTHONPATH": "${workspaceFolder}/build/game_of_life"
-            }
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

@@ -20,7 +20,8 @@ set(PYBIND_DIR "${PROJECT_DIR}/thirdparty/pybind11"
 set(BLEND2D_STATIC TRUE)
 include("${BLEND2D_DIR}/CMakeLists.txt")
 
-message("*********** ${PYBIND_DIR}")
+set(PYBIND11_PYTHON_VERSION "3.9")
+set(PYBIND11_FINDPYTHON ON)
 add_subdirectory("${PYBIND_DIR}")
 add_subdirectory("${SDL_DIR}")
 

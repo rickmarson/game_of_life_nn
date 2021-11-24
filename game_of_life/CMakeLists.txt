@@ -28,3 +28,9 @@ add_executable(test_game_of_life ${TEST_SRC_FILES})
 target_link_libraries(game_of_life Blend2D::Blend2D)
 target_link_libraries(game_of_life_py PRIVATE game_of_life Blend2D::Blend2D)
 target_link_libraries(test_game_of_life game_of_life Blend2D::Blend2D)
+
+add_custom_command(TARGET game_of_life_py
+                   POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                   "${CMAKE_CURRENT_BINARY_DIR}/game_of_life_py.cpython-39-x86_64-linux-gnu.so"
+                   "${CMAKE_CURRENT_BINARY_DIR}/game_of_life_py.so")  # python doesn't recognise the original library name

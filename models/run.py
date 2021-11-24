@@ -1,5 +1,8 @@
-import numpy as np
+import sys
 import os
+sys.path.append(os.path.join(os.getcwd(), "build/game_of_life"))
+
+import numpy as np
 import torch
 import pygame
 import time
@@ -69,7 +72,7 @@ def main():
         new_grid_np = new_grid.squeeze().cpu().detach().numpy()
         
         new_grid_np = convert_model_output(new_grid_np)
-        pixel_data = gol.render_grid(new_grid_np.tolist(), False)
+        pixel_data = gol.render_grid(new_grid_np.tolist(), False, True)
         render_grid(pixel_data, screen, w * cell_pixel_size, h * cell_pixel_size)
         
         pygame.display.flip()
